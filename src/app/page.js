@@ -9,7 +9,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
-import Footer from 'src/app/footer/footer'
+import Footer from "src/app/footer/footer";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -56,7 +56,7 @@ export default function Home() {
   console.log(products);
 
   return (
-    <main className="">
+    <main className="scroll-smooth focus:scroll-auto">
       <img
         className="-mt-10"
         src="https://media.discordapp.net/attachments/1170650328950124618/1188908851316150272/image.png?ex=659c3ca7&is=6589c7a7&hm=9b81ff482159731f1195cdc8e35484da72b002983118db46d8b6f854d6ce1d48&=&format=webp&quality=lossless&width=1440&height=86"
@@ -92,7 +92,7 @@ export default function Home() {
           </div>
         </Slider>
       </div>
-      <section className="flex min-h-screen flex-col items-center justify-between p-24">
+      <section className="hidden sm:flex min-h-screen flex-col items-center justify-between fade lg:flex min-h-screen flex-col items-center justify-between p-24 fade">
         <div className="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:items-stretch">
             <div className="grid p-6 bg-gray-100 rounded place-content-center sm:p-8">
@@ -144,11 +144,16 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <img src="https://cdn.discordapp.com/attachments/1170650328950124618/1188915454274711592/image.png?ex=659c42cd&is=6589cdcd&hm=b293fcf9adfe9beeaaf3ede137f9d122be901948b8db382ce8a4fb4a8b8fdf9c&" />
+      </section>
+      <img
+        className="fadee mt-10 sm:-mt-72 lg:mt-10"
+        src="https://media.discordapp.net/attachments/989175257732620410/1189060657392394240/image.png?ex=659cca08&is=658a5508&hm=37fc14668e435f9e84bdfa7479546c37082a637ed30ec51bfcb255bf243bffd9&=&format=webp&quality=lossless&width=1440&height=498"
+      />
+      <section className="-mt-20 sm:mt-30 fade flex min-h-screen flex-col items-center justify-between  lg:fade flex min-h-screen flex-col items-center justify-between p-24 lg:mt-8">
         <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
           <div className="text-center">
-            <h2 className="text-xl font-bold text-gray-950 sm:text-3xl">
-              SHOP BY CATEGORY
+            <h2 className="pb-10 text-xl font-bold text-gray-950 sm:text-3xl">
+              CATEGORY
             </h2>
           </div>
           <ul className="grid grid-cols-1 gap-4 mt-8 lg:grid-cols-3">
@@ -189,7 +194,7 @@ export default function Home() {
             <li className="lg:col-span-2 lg:col-start-2 lg:row-span-2 lg:row-start-1">
               <div className="relative block group">
                 <img
-                  src="https://images.unsplash.com/photo-1542452255191-c85a98f2c5d1?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  src="https://cdn.discordapp.com/attachments/989176778490777630/1189079256127504486/image.png?ex=659cdb5a&is=658a665a&hm=81637f7663a2622190064b85887fdc9a555b6cbed8dc0a7e3290b5dcc11a3036&"
                   className="object-cover w-full aspect-square"
                 />
                 <div className="absolute inset-0 flex flex-col items-start justify-end p-6">
@@ -206,7 +211,7 @@ export default function Home() {
           </ul>
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </main>
   );
 }
