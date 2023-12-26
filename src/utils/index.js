@@ -200,14 +200,14 @@ export const AvailableSizes = [
   },
 ];
 
-export const firebaseConfig = {
-  apiKey: "API_KEY",
-  authDomain: "AUTH_DOMAIN",
-  projectId: "PROJECT_ID",
-  storageBucket: "STROAGE_BUCKET",
-  messagingSenderId: "MESSAGING_SENDER_ID",
-  appId: "APP_ID",
-  measurementId: "MEASUREMENT_ID",
+const firebaseConfig = {
+  apiKey: "AIzaSyCTepIF610qMN3rQwCJUc_h3phJrqIQxCM",
+  authDomain: "pweb-128dc.firebaseapp.com",
+  projectId: "pweb-128dc",
+  storageBucket: "pweb-128dc.appspot.com",
+  messagingSenderId: "157134978652",
+  appId: "1:157134978652:web:368ce2cda22580d0f1b099",
+  measurementId: "G-77G9T9913M",
 };
 
 export const firebaseStroageURL = "gs://pweb-128dc.appspot.com";
