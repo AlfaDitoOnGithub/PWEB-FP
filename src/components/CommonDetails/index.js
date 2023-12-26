@@ -80,10 +80,10 @@ export default function CommonDetails({ item }) {
             <h1 className="text-2xl font-bold text-gray-900">
               {item && item.name}
             </h1>
-            <div className="mt-10 flex flex-col items-center justify-between space-y-4 botder-t border-b py-4 sm:flex-row sm:space-y-0">
+            <div className="mt-10 flex flex-col items-center justify-between space-y-4 border-t border-b py-4 sm:flex-row sm:space-y-0">
               <div className="flex items-end">
                 <h1
-                  className={`text-3xl font-bold mr-2 ${
+                  className={`text-black text-3xl font-bold mr-2 ${
                     item.onSale === "yes" ? "line-through" : ""
                   }`}
                 >
@@ -133,14 +133,14 @@ export default function CommonDetails({ item }) {
                   </a>
                 </nav>
               </div>
-              <div className="mt-8 flow-root sm:mt-12">
+              <div className="text-black mt-8 flow-root sm:mt-12">
                 {item && item.description}
               </div>
             </div>
           </div>
         </div>
       </div>
-      <Notification/>
+      <Notification />
     </section>
   );
 }

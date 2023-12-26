@@ -7,6 +7,14 @@ import { useContext, useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 export default function Home() {
   const { isAuthUser } = useContext(GlobalContext);
@@ -102,39 +110,36 @@ export default function Home() {
               </div>
             </div>
             <div className="lg:col-span-2 lg:py-8">
-              <ul className="grid grid-cols-2 gap-4">
-                {products && products.length
-                  ? products
-                      .filter((item) => item.onSale === "yes")
-                      .splice(0, 2)
-                      .map((productItem) => (
-                        <li
-                          onClick={() =>
-                            router.push(`/product/${productItem._id}`)
-                          }
-                          className="cursor-pointer"
-                          key={productItem._id}
-                        >
-                          <div>
-                            <img
-                              src={productItem.imageUrl}
-                              alt="Sale Product Item"
-                              className="object-cover w-full rounded aspect-square"
-                            />
-                          </div>
-                          <div className="mt-3">
-                            <h3 className="font-medium text-gray-900">
-                              {productItem.name}
-                            </h3>
-                            <p className="mt-1 text-sm text-gray-800">
-                              ${productItem.price}{" "}
-                              <span className="text-red-700">{`(-${productItem.priceDrop}%) Off`}</span>
-                            </p>
-                          </div>
-                        </li>
-                      ))
-                  : null}
-              </ul>
+              <Swiper
+                spaceBetween={20}
+                slidesPerView={2}
+                pagination={{ clickable: true }}
+                autoplay={{ delay: 2500, disableOnInteraction: false }}
+              >
+                {products.map((productItem) => (
+                  <SwiperSlide key={productItem._id}>
+                    <div
+                      onClick={() => router.push(`/product/${productItem._id}`)}
+                      className="cursor-pointer"
+                    >
+                      <img
+                        src={productItem.imageUrl}
+                        alt="Sale Product Item"
+                        className="object-cover w-full rounded aspect-square"
+                      />
+                      <div className="mt-3">
+                        <h3 className="font-medium text-gray-900">
+                          {productItem.name}
+                        </h3>
+                        <p className="mt-1 text-sm text-gray-800">
+                          ${productItem.price}{" "}
+                          <span className="text-red-700">{`(-${productItem.priceDrop}%) Off`}</span>
+                        </p>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
           </div>
         </div>
