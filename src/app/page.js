@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
+import Footer from 'src/app/footer/footer'
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -205,6 +206,7 @@ export default function Home() {
           </ul>
         </div>
       </section>
+      <Footer/>
     </main>
   );
 }
