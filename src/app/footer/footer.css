@@ -3,7 +3,8 @@
 }
 
 .footer{
-    background-color: black;
+    background-color: white;
+    border-top: 1px solid black;
 }
 
 .sb__footer{
@@ -28,11 +29,11 @@
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    color: white;
+    color: black;
 }
 
 a{
-    color: rgb(175, 175, 179);
+    color: black;
     text-decoration: none;
 }
 
@@ -74,19 +75,20 @@ a{
     font-size: 13px;
     line-height: 15px;
     margin-left: 2rem;
-    color: white;
+    color: black;
     font-weight: 600;
 }
 
 hr{
-    color: white !important;
+    color: black !important;
     width: 100%;
 }
 
 .sb__footer-copyright p{
     font-size: 13px;
-    line-height: 15px;
-    color: rgb(255, 255, 255);
+    /* line-height: 15px; */
+    border-top: 1px solid black;
+    color: black;
     font-weight: 600;
 }
 
